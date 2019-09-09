@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:click</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{message}}
+			<button @click="fun1('v-on')">vue的onclick</button>
+		</div>
+		<button type="button" onclick="history.back(-1);">返回</button>
+
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			data: {
+                message: "hello demo2"
+            },
+			methods:{
+			    fun1:function (msg) {
+					alert("hello!");
+					if(this.message=="v-on"){
+                        this.message="hello demo2";
+                    }else {
+                        this.message=msg;
+                    }
+                }
+			}
+        });
+	</script>
+</html> 

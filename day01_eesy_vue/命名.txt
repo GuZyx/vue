@@ -1,0 +1,14 @@
+demo1:快速入门
+demo2:单击
+demo3:键盘按下
+demo4:鼠标悬停
+demo5:表单验证(事件修饰符)
+demo6:按键修饰符
+demo7:v-text(插入文本)、v-html(插入标签)
+demo8:v-bind(给HTML标签的属性设置变量的值)
+demo9:v-model的使用(可以给标签附上对象格式的属性)
+demo10:v-for 遍历数组
+demo11:v-for 遍历对象
+demo12:v-for 遍历对象集合
+demo13:if show
+demo14:生命周期

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:事件修饰符</title>
+		<style>
+			#div {
+				background-color: red;
+				height: 300px;
+				width: 300px;
+			}
+		</style>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<form @submit.prevent action="index.jsp" method="post">
+				<input type="submit" value="vue提交"/>
+			</form>
+			<!--<form action="index.jsp" onsubmit="return isSubmit()" method="post">-->
+				<!--<input type="submit" value="js提交"/>-->
+			<!--</form>-->
+			<div @mouseover="fun1" id="div">
+				<textarea @mouseover.stop="fun2($event)">这是一个vue文件域</textarea>
+			</div>
+		</div>
+		<button type="button" onclick="history.back(-1);">返回</button>
+
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			methods:{
+                fun1:function () {
+                    alert("vue:鼠标移动到了div上")
+                },
+                fun2:function (event) {
+                    alert("vue:鼠标移动到了textarea上")
+                    // event.stopPropagation();
+                }
+			}
+		})
+		
+		//传统JS方法
+		function isSubmit() {
+		    //表单一验证必须有一个明确的Boolean类型返回值
+			//在验证方法时必须加上 return 返回值
+			return false;
+        }
+	</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:按键修饰符</title>
+
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<input @keydown.enter="fun1">
+		</div>
+		<button type="button" onclick="history.back(-1);">返回</button>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#app",
+			methods:{
+			    fun1:function () {
+					alert("回车被按下")
+                }
+			}
+		})
+	</script>
+
+</html>
